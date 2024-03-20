@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate</title>
+    <style>
+        /* Add CSS styles for the certificate */
+        /* Example: */
+        .certificate {
+            border: 2px solid #000;
+            padding: 20px;
+            width: 600px;
+            margin: 0 auto;
+        }
+        /* Add more styles as needed */
+    </style>
+</head>
+<body>
+    <div class="certificate">
+        <h1>Certificate of Verification</h1>
+        <p><strong>Verification Type:</strong> {{verificationType}}</p>
+        <p><strong>Passport Number:</strong> {{passportNumber}}</p>
+        <!-- Add more fields as needed -->
+        <!-- Example: -->
+        <p><strong>Name (English):</strong> {{nameEnglish}}</p>
+        <p><strong>Name (Bengali):</strong> {{nameBengali}}</p>
+        <!-- Add placeholders for other fields -->
+    </div>
+
+
+    <script>// Retrieve saved form data from local storage
+        var formDataJSON = localStorage.getItem("formData");
+        
+        // Parse JSON string back into JavaScript object
+        var formData = JSON.parse(formDataJSON);
+        
+        // Replace placeholders in HTML template with actual form data
+        var certificateHTML = `
+            <!-- Certificate HTML template -->
+            <h1>Certificate of Verification</h1>
+            <p><strong>Verification Type:</strong> ${formData.verificationType}</p>
+            <p><strong>Passport Number:</strong> ${formData.passportNumber}</p>
+            <!-- Add more fields as needed -->
+            <!-- Example: -->
+            <p><strong>Name (English):</strong> ${formData.nameEnglish}</p>
+            <p><strong>Name (Bengali):</strong> ${formData.nameBengali}</p>
+            <!-- Add placeholders for other fields -->
+        `;
+        
+        // Display the certificate in the browser
+        document.body.innerHTML = certificateHTML;
+        </script>
+</body>
+</html>
