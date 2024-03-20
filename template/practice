@@ -1,0 +1,19 @@
+                    <form id="multi-step-form">
+  
+
+                        <!-- Step 2 -->
+                        <div class="step tab-pane " id="step2">
+                            <h2>Applicant Information</h2>
+                            <!-- Add your applicant information fields here -->
+                            <button type="button" class="prev-btn">Previous</button>
+                            <button type="button" class="next-btn">Next</button>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="step tab-pane " id="step3">
+                            <h2>Application Review</h2>
+                            <!-- Add your application review fields here -->
+                            <button type="button" class="prev-btn">Previous</button>
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
