@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- font-awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&display=swap');
+
+        body {
+            font-family: 'Baloo Da 2', sans-serif;
+        }
+
+        .nav-bg {
+            background-color: #4D5395;
+            height: 100px;
+        }
+
+
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        @media print {
+            body * {
+                visibility: visible !important;
+            }
+
+            #print-area {
+                width: 2480px;
+                height: 3508px;
+            }
+
+            button {
+                display: none;
+            }
+        }
+
+        th,
+        td {
+            border-bottom: 1px solid #ddd;
+        }
+
+        thead,
+        tr {
+            width: 1233px;
+            height: 71px;
+        }
+
+        .col-6,
+        .col-12 {
+            padding: 0%;
+        }
+
+        .form-item .title {
+            background: #EBEBEB;
+            padding: 8px 10px 5px 10px;
+            margin-right: 10px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+
+        .form-item .value {
+            font-size: 22px;
+        }
+
+        .parents-details-header {
+            font-size: 18px;
+            padding: 6px;
+
+        }
+
+        header {
+            color: #4D5395;
+        }
+
+        @media screen and (max-width: 720px) {
+            .content {
+                min-width: 793px;
+                overflow-x: auto;
+            }
+
+            #print-area {
+                overflow-x: auto;
+            }
+        }
+
+        @media screen and (max-width: 420px) {
+            h2 {
+                font-size: 22px;
+            }
+
+            small {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar nav-bg">
+        <div class="container-md">
+            <a class="navbar-brand d-flex align-items-center text-center" href="../index.html">
+                <img src="../assets/Img/bd-gov-log0.png" alt="" width="65px" height="65px"
+                    class="d-inline-block align-text-top p-1">
+                <div class="text-start text-white">
+                    <h2 class="p-0 m-0">ওয়েজ আর্নার্স কল্যান বোর্ড</h2>
+                    <small class="text-start m-auto d-flex" style="font-size: 12px;">প্রবাসী কল্যান ও বৈদেশিক কর্মসংস্থান মন্ত্রনালয়</small>
+                </div>
+            </a>
+        </div>
+    </nav>
+
+    <form class="d-flex justify-content-center content my-5" id="print-area">
+        <div class="container-md p-5 border border-dark content overflow-x">
+            <header class="row overflow-x">
+                <div class="col-2"></div>
+                <div class="col-8 text-center">
+                    <div class="text-center pb-4">
+                        <img class="my-2" src="../assets/Img/bd-gov-log0.png" width="64" height="64"
+                            alt="Bangladesh Government Logo">
+                        <div class="text-container">
+                            <h3>গণপ্রজাতন্ত্রী বাংলাদেশ সরকার <br> ওয়েজ আর্নার্স কল্যান বোর্ড</h4>
+                                <h5>প্রবাসী কল্যান ও বৈদেশিক কর্মসংস্থান মন্ত্রনালয়</h5>
+                                <h6>৭১-৭২ প্রবাসী কল্যান ভবইন, ইস্কাটয়ন গার্ডেন, রমনা, ঢাকা।</h6>
+                                <p><a href="http://www.wewb.gov.bd">(www.wewb.gov.bd)</a></p>
+                        </div>
+                    </div>
+                    <h5 class="pb-2">প্রবাসী কর্মীর প্রতিবন্ধী সন্তানদের “প্রতিবন্ধী ভাতা” আবেদন ফরম</h5>
+                </div>
+                <div class="col-2 d-flex align-items-end justify-content-end overflow-auto">
+                    <!-- Align items to the bottom and justify content to the end -->
+                    <img id="photo1" class="img-fluid mb-4" src="../assets/Img/candidate-img.png" alt="Candidate Photo"
+                        width="150" height="150">
+                </div>
+            </header>
+
+            <div class="">
+                <div class="row">
+                    <div class="form-item col-12 border">
+                        <span class="title border">Application ID</span>
+                        <span class="value" id="application-Id"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-item col-6 border">
+                        <span class="title border">সুবর্ণ পরিচয় পত্র/কার্ড নম্বর</span>
+                        <span class="value" id="national-Id"></span>
+                    </div>
+                    <div class="form-item col-6 border">
+                        <span class="title border">প্রতিবন্ধীতার ধরন</span>
+                        <span class="value" id="disability-type"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-item col-12 title border bg border mt-4">
+                        <span class="title border ml-0">প্রার্থীর নাম (বাংলায়)</span>
+                        <span class="value" id="name-bengali"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-item col-12 border">
+                        <span class="title border">প্রার্থীর নাম (ইংরেজি)</span>
+                        <span class="value" id="name-english"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-item col-6 border">
+                        <span class="title border">জন্ম তারিখ</span>
+                        <span class="value" id="date-of-birth">12324234</span>
+                    </div>
+                    <div class="form-item col-6 border">
+                        <span class="title border">বয়স</span>
+                        <span class="value" id="age"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-item col-12 border">
+                        <span class="title border">পিতার নাম (বাংলায়)</span>
+                        <span class="value" id="father-name-bengali"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-item col-12 border">
+                        <span class="title border">মাতার নাম</span>
+                        <span class="value" id="mother-name-bengali"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-item col-6 border">
+                        <span class="title border">অভিভাবকের নাম</span>
+                        <span class="value" id="guardian-name"></span>
+                    </div>
+                    <div class="form-item col-6 border">
+                        <span class="title border">সম্পর্ক</span>
+                        <span class="value" id="guardian-relationship"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-item col-12 border">
+                        <span class="title border">পিতা/মাতা/অভিভাবকের মোবাইল নম্বর</span>
+                        <span class="value" id="guardianm-mobile"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-item col-12 border">
+                        <span class="title border">বর্তমান ঠিকানা</span>
+                        <span class="value" id="current-address"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-item col-12 border">
+                        <span class="title border">স্থায়ী ঠিকানা</span>
+                        <span class="value" id="permanent-address"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bootstrap JS and dependencies (optional) -->
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+            <!-- Parents' details -->
+            <div class="row">
+                <div class="form-item col-12 border mt-4 parents-details-header">
+                    <span class="title bg-transparent">প্রবাসী পিতা/মাতা অভিভাবকের তথ্য</span>
+                </div>
+                <div class="border col-12 text-center">
+                    <table class="col-12">
+                        <thead class="form-item" style="background-color: #EBEBEB">
+                            <th class="title">ক্রম</th>
+                            <th class="title">পিতা/মাতার নাম</th>
+                            <th class="title">পাসপোর্ট নম্বর</th>
+                            <th class="title">বহির্গমন ছাড়পত্র/ মেম্বারশীপ নম্বর /<br>দুতাবাস সনদের (NOC) স্মারক নং
+                            </th>
+                            <th class="title">কর্মরত দেশের নাম</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="value">1</td>
+                                <td class="value" id="prabasi-parents-name-english"></td>
+                                <td class="value" id="passport-number"></td>
+                                <td class="value" id="noc-mark-number"></td>
+                                <td class="value" id="working-country"></td>
+                            </tr>
+                            <tr>
+                                <td class="value">2</td>
+                                <td class="value" id="parent2Name"></td>
+                                <td class="value" id="parent2Passport"></td>
+                                <td class="value" id="parent2NOC"></td>
+                                <td class="value" id="parent2Country"></td>
+                            </tr>
+                            <tr>
+                                <td class="value">3</td>
+                                <td class="value" id="parent3Name"></td>
+                                <td class="value" id="parent3Passport"></td>
+                                <td class="value" id="parent3NOC"></td>
+                                <td class="value" id="parent3Country"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class=" mt-4">
+                <div class="row border guardian-signature">
+                    <div class="ml-5 form-item d-flex flex-column justify-content-center align-items-center">
+                        <img id="parents-signature" src="../assets/Img/parents-signature.png" alt="Parent's Signature"
+                            width="148" height="58">
+                        <p class="mt-2 w-75 text-center">পিতা/মাতা/ অভিভাবকের নাম ও স্বাক্ষর</p>
+                    </div>
+                </div>
+                <div class="develoment-brand col-12 justify-content-end text-right">
+                    <small>Design & Development by</small>
+                    <img src="../assets/Img/pridesys-black-logo.png" alt="Pridesys Logo" width="83px" height="23px">
+                </div>
+            </div>
+            <div class="text-center my-5">
+                <button type="button" id="dawonload-btn" onclick="downloadPDF()">ডাউনলোড</button>
+                <button type="button" id="print-btn" onclick="printForm()">প্রিন্ট</button>
+            </div>
+        </div>
+        </div>
+    </form>
+
+    <style>
+        .guardian-signature {
+            height: 200px;
+        }
+
+        #dawonload-btn {
+            padding: 16px 24px 16px 24px;
+            border-radius: 6px;
+            background-color: #4D5395;
+            color: white;
+        }
+
+        #print-btn {
+            padding: 16px 24px 16px 24px;
+            border-radius: 6px;
+            background-color: #414141;
+            color: white;
+        }
+    </style>
+
+
+
+
+    <footer class="container navbar">
+        <div class="col-12 d-flex justify-content-between">
+            <ul class="d-flex flex-column p-0  list-unstyled" style="color: black;">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: black;">বিজ্ঞপ্তি</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: black;">বিধিমালা</a>
+                </li>
+            </ul>
+
+            <ul class="d-flex flex-column p-0  list-unstyled" style="color: black;">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: black;">হেল্প ডেস্ক</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: black;">ব্যবহারিক সহায়তা</a>
+                </li>
+            </ul>
+
+            <ul class="d-flex flex-column list-unstyled p-0" style="color: black;">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: black;">সামাজিক যোগাযোগ</a>
+                </li>
+                <li class="nav-item px-3">
+                    <a class="" href="#"> <i class="fa-brands fa-facebook fs-3" style="color: #316FF6;"></i>
+                    </a>
+                    <a class="" href=""> <i class="fa-brands fa-twitter fs-3" style="color: #1DA1F2;"></i> </a>
+                    <a class="" href=""><i class="fa-brands fa-youtube fs-3" style="color: #bb2c2c;"></i></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="d-flex m-auto col-12 justify-content-between align-items-center pt-3 pb-3 border-top">
+            <small>কপিরাইট © ২০২৪ সর্বস্বত্ব সংরক্ষিত গণপ্রজাতন্ত্রী বাংলাদেশ সরকার</small>
+            <div class="d-sm-flex align-items-center" style="color: black;">
+                <small class="px-2">কারিগরি সহযোগিতায় </small></p><a href=""><img
+                        src="../assets/Img/pridesys-black-logo.png" width="138" height="33" alt=""></a>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script>
+        function printForm() {
+            var printContents = document.getElementById("print-area").innerHTML;
+            var originalContents = document.body.innerHTML;
+            document.body.innerHTML = printContents;
+            window.print();
+            document.body.innerHTML = originalContents;
+        }
+
+        function downloadPDF() {
+            const element = document.getElementById('print-area');
+            html2pdf()
+                .from(element)
+                .save('form.pdf');
+        }
+    </script>
+
+
+
+  
+    <script>
+        var formDataJSON = localStorage.getItem("formData");
+
+        var formData = JSON.parse(formDataJSON);
+
+        document.getElementById("application-Id").innerText = formData.applicationId;
+        document.getElementById("national-Id").innerText = formData.number;
+        document.getElementById("disability-type").innerText = formData.disabilityType;
+        document.getElementById("name-bengali").innerText = formData.nameBengali;
+        document.getElementById("name-english").innerText = formData.nameEnglish;
+        document.getElementById("date-of-birth").innerText = formData.dateOfBirth;
+        document.getElementById("age").innerText = formData.age;
+        document.getElementById("father-name-bengali").innerText = formData.fatherNameBengali;
+        document.getElementById("father-name-english").innerText = formData.fatherNameEnglish;
+        document.getElementById("mother-name-bengali").innerText = formData.motherNameBengali;
+        document.getElementById("mother-name-english").innerText = formData.motherNameEnglish;
+        document.getElementById("prabasi-parents-name-english").innerText = formData.prabasiParentsNameEnglish;
+        document.getElementById("noc-mark-number").innerText = formData.noc - mark - number;
+        document.getElementById("working-country").innerText = formData.working - country;
+        document.getElementById("passport-number").innerText = formData.passportNumber;
+        document.getElementById("guardian-relationship").innerText = formData.guardianRelationship;
+        document.getElementById("guardian-mobile1").innerText = formData.guardianMobile1;
+        document.getElementById("guardian-mobile2").innerText = formData.guardianMobile2;
+        document.getElementById("current-address-street").innerText = formData.currentAddressStreet;
+        document.getElementById("current-address-district").innerText = formData.currentAddressDistrict;
+        document.getElementById("current-address-subdistrict").innerText = formData.currentAddressSubdistrict;
+        document.getElementById("current-address-post-office").innerText = formData.currentAddressPostOffice;
+        document.getElementById("current-address-postcode").innerText = formData.currentAddressPostcode;
+        document.getElementById("permanent-address-street").innerText = formData.permanentAddressStreet;
+        document.getElementById("permanent-address-district").innerText = formData.permanentAddressDistrict;
+        document.getElementById("permanent-address-aubdistrict").innerText = formData.permanentAddressSubdistrict;
+        document.getElementById("permanent-address-post-office").innerText = formData.permanentAddressPostOffice;
+        document.getElementById("permanent-address-postcode").innerText = formData.permanentAddressPostcode;
+        document.getElementById("account-holder-name").innerText = formData.accountHolderName;
+        document.getElementById("account-number").innerText = formData.accountNumber;
+        document.getElementById("routing-number").innerText = formData.routingNumber;
+
+        const queryParams = new URLSearchParams(window.location.search);
+        const attachments = Object.fromEntries(queryParams.entries());
+
+        for (const key in attachments) {
+            if (attachments.hasOwnProperty(key)) {
+                const imageId = key;
+                const imageUrl = attachments[key];
+
+                switch (imageId) {
+                    case 'parents-signature':
+                        document.getElementById('parents-signature').src = imageUrl;
+                        break;
+                    case 'photo1':
+                        document.getElementById('photo1').src = imageUrl;
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
